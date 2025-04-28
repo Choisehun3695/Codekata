@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+char* solution(int num) {
+    const char* src = (num % 2 == 0) ? "Even" : "Odd";
+    
+    size_t len = strlen(src) + 1;
+    char* answer = (char*)malloc(len);
+    if (answer) {
+        strcpy(answer, src);
+    }
+    return answer;
+}
